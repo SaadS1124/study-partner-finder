@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Partner Found</title>
+</head>
+<body>
+    <h1>Study Partner Found</h1>
+    {% if match %}
+        <p>Best match for you is:</p>
+        <p>Name: {{ match.name }}</p>
+        <p>Class: {{ match.class }}</p>
+        <p>Teacher: {{ match.teacher }}</p>
+        <p>Free Periods: {{ match.free_periods }}</p>
+    {% else %}
+        <p>No match found. Try again later.</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
+
